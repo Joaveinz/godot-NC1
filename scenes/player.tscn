@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://cpyyxdql5u8sd"]
+
+[ext_resource type="Texture2D" uid="uid://u1l2wwvu0mje" path="res://icon.svg" id="1_jv2f0"]
+[ext_resource type="Script" path="res://scenes/CharacterBody2D.gd" id="1_x0oci"]
+[ext_resource type="Script" path="res://scenes/Gun.gd" id="3_d3iw1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2lrl7"]
+size = Vector2(62, 62)
+
+[node name="Player" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("1_x0oci")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("RectangleShape2D_2lrl7")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+scale = Vector2(0.476563, 0.476563)
+texture = ExtResource("1_jv2f0")
+
+[node name="Gun" type="Node2D" parent="CharacterBody2D"]
+script = ExtResource("3_d3iw1")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D/Gun"]
+position = Vector2(33, 3.8147e-06)
+scale = Vector2(1, 0.101563)
+texture = ExtResource("1_jv2f0")
+
+[node name="Bullet_pos" type="Marker2D" parent="CharacterBody2D/Gun"]
+position = Vector2(108, 0)
