@@ -1,19 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://crvlf4y5rliih"]
+[gd_scene load_steps=2 format=3 uid="uid://crvlf4y5rliih"]
 
-[ext_resource type="Texture2D" uid="uid://u1l2wwvu0mje" path="res://icon.svg" id="1_dibav"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_1g7jy"]
-size = Vector2(650, 20)
+[ext_resource type="PackedScene" uid="uid://bovkhr5escp5h" path="res://scenes/tile_map.tscn" id="2_rp7n4"]
 
 [node name="Node2D" type="Node2D"]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-shape = SubResource("RectangleShape2D_1g7jy")
-
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
-modulate = Color(0, 0, 0, 1)
-position = Vector2(-0.5, 1.5)
-scale = Vector2(5.07031, 0.179688)
-texture = ExtResource("1_dibav")
+[node name="TileMap" parent="." instance=ExtResource("2_rp7n4")]
+position = Vector2(-204, 3)
+scale = Vector2(0.1, 0.1)
