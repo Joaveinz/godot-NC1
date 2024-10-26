@@ -1,22 +1,19 @@
 [gd_scene load_steps=4 format=3 uid="uid://dbb28theeu4wg"]
 
 [ext_resource type="Script" path="res://scenes/bullet.gd" id="1_chitp"]
-[ext_resource type="Texture2D" uid="uid://u1l2wwvu0mje" path="res://icon.svg" id="1_y2n1p"]
+[ext_resource type="Texture2D" uid="uid://gf6lkdl2y8ci" path="res://assets/Weapons/bullet.png" id="2_fhqfe"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bb4ff"]
-size = Vector2(25.8625, 22.7992)
+size = Vector2(14, 14)
 
 [node name="Bullet" type="CharacterBody2D"]
+scale = Vector2(1.2676, 1.2676)
 script = ExtResource("1_chitp")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-rotation = 0.253073
-scale = Vector2(0.2, 0.2)
-skew = 1.01404
-texture = ExtResource("1_y2n1p")
+scale = Vector2(0.0357158, 0.0357158)
+texture = ExtResource("2_fhqfe")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 8.9407e-08)
-rotation = 0.279253
-skew = 0.90059
+position = Vector2(0, -2.38419e-07)
 shape = SubResource("RectangleShape2D_bb4ff")
