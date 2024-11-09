@@ -1,0 +1,216 @@
+[gd_scene load_steps=60 format=3 uid="uid://l5wfisf80a7v"]
+
+[ext_resource type="Script" path="res://levels/first_level.gd" id="1_byi3v"]
+[ext_resource type="PackedScene" uid="uid://bkja5xvrlhegq" path="res://levels/level2.tscn" id="2_1pm50"]
+[ext_resource type="PackedScene" uid="uid://bovkhr5escp5h" path="res://scenes/tile_map.tscn" id="2_07ea1"]
+[ext_resource type="Script" path="res://scenes/CharacterBody2D.gd" id="2_mfyes"]
+[ext_resource type="Texture2D" uid="uid://dntiahjwm5qjo" path="res://assets/Characters/Orc/PNG/PNG Sequences/Idle/0_Orc_Idle_000.png" id="3_3l8dy"]
+[ext_resource type="Script" path="res://scenes/spawn.gd" id="3_67xpm"]
+[ext_resource type="Script" path="res://scenes/Gun.gd" id="4_oy0ao"]
+[ext_resource type="Texture2D" uid="uid://dw7l7qm7bm4yk" path="res://assets/Props/Miscellaneous/Umbrella_Green.png" id="4_r3c8g"]
+[ext_resource type="Texture2D" uid="uid://b8v78sjdfgbkq" path="res://assets/Props/Miscellaneous/Snowman_Green.png" id="5_ajota"]
+[ext_resource type="Texture2D" uid="uid://b7sgdhgmntf2h" path="res://assets/Weapons/bazooka.png" id="5_kb8hw"]
+[ext_resource type="Texture2D" uid="uid://b7dls6sjevgb3" path="res://assets/Characters/Orc/PNG/PNG Sequences/Idle Blinking/0_Orc_Idle Blinking_000.png" id="6_ww2dj"]
+[ext_resource type="Texture2D" uid="uid://bj21nvjoa6lyf" path="res://assets/Characters/Orc/PNG/PNG Sequences/Idle Blinking/0_Orc_Idle Blinking_001.png" id="7_l5s0l"]
+[ext_resource type="Texture2D" uid="uid://f317usgtoiw" path="res://assets/Characters/Orc/PNG/PNG Sequences/Idle Blinking/0_Orc_Idle Blinking_002.png" id="8_8t526"]
+[ext_resource type="Texture2D" uid="uid://d288orjpnm3fs" path="res://assets/Characters/Orc/PNG/PNG Sequences/Idle Blinking/0_Orc_Idle Blinking_003.png" id="9_8wkn0"]
+[ext_resource type="Texture2D" uid="uid://5gmfut84en7h" path="res://assets/Characters/Orc/PNG/PNG Sequences/Idle Blinking/0_Orc_Idle Blinking_004.png" id="10_33u3y"]
+[ext_resource type="Texture2D" uid="uid://7kb72h6gc31i" path="res://assets/Characters/Orc/PNG/PNG Sequences/Idle Blinking/0_Orc_Idle Blinking_005.png" id="11_80ee1"]
+[ext_resource type="Texture2D" uid="uid://bnya1wufe3ds7" path="res://assets/Characters/Orc/PNG/PNG Sequences/Idle Blinking/0_Orc_Idle Blinking_006.png" id="12_8q7eb"]
+[ext_resource type="Texture2D" uid="uid://dnc8l8q6oyo2e" path="res://assets/Characters/Orc/PNG/PNG Sequences/Idle/0_Orc_Idle_007.png" id="13_gdap2"]
+[ext_resource type="Texture2D" uid="uid://b25olrhi6mwl0" path="res://assets/Characters/Orc/PNG/PNG Sequences/Idle Blinking/0_Orc_Idle Blinking_008.png" id="14_5db8m"]
+[ext_resource type="Texture2D" uid="uid://lri7js7xoc8k" path="res://assets/Characters/Orc/PNG/PNG Sequences/Idle Blinking/0_Orc_Idle Blinking_009.png" id="15_3wmr7"]
+[ext_resource type="Texture2D" uid="uid://bsyakrlx0ww8c" path="res://assets/Characters/Orc/PNG/PNG Sequences/Idle Blinking/0_Orc_Idle Blinking_010.png" id="16_sk4rb"]
+[ext_resource type="Texture2D" uid="uid://bf380s730seaj" path="res://assets/Characters/Orc/PNG/PNG Sequences/Idle Blinking/0_Orc_Idle Blinking_011.png" id="17_sne5p"]
+[ext_resource type="Texture2D" uid="uid://5bj543agsl4u" path="res://assets/Characters/Orc/PNG/PNG Sequences/Idle Blinking/0_Orc_Idle Blinking_012.png" id="18_xbmi1"]
+[ext_resource type="Texture2D" uid="uid://dsmqqftfgysst" path="res://assets/Characters/Orc/PNG/PNG Sequences/Idle Blinking/0_Orc_Idle Blinking_013.png" id="19_7j2s4"]
+[ext_resource type="Texture2D" uid="uid://dtot55qhwtvrk" path="res://assets/Characters/Orc/PNG/PNG Sequences/Idle/0_Orc_Idle_014.png" id="20_aenno"]
+[ext_resource type="Texture2D" uid="uid://bupplf8g5v25c" path="res://assets/Characters/Orc/PNG/PNG Sequences/Idle/0_Orc_Idle_015.png" id="21_5v5gj"]
+[ext_resource type="Texture2D" uid="uid://mlvnoo4ms0t3" path="res://assets/Characters/Orc/PNG/PNG Sequences/Idle/0_Orc_Idle_016.png" id="22_hkyuv"]
+[ext_resource type="Texture2D" uid="uid://b70vsqar7h1qb" path="res://assets/Characters/Orc/PNG/PNG Sequences/Idle/0_Orc_Idle_017.png" id="23_i6scs"]
+[ext_resource type="Texture2D" uid="uid://bjbjxnus7mh13" path="res://assets/Characters/Orc/PNG/PNG Sequences/Jump Loop/0_Orc_Jump Loop_000.png" id="24_igtl2"]
+[ext_resource type="Texture2D" uid="uid://6twr1ripc0ce" path="res://assets/Characters/Orc/PNG/PNG Sequences/Jump Loop/0_Orc_Jump Loop_001.png" id="25_dnuep"]
+[ext_resource type="Texture2D" uid="uid://vsgikaldx8eh" path="res://assets/Characters/Orc/PNG/PNG Sequences/Jump Loop/0_Orc_Jump Loop_002.png" id="26_hcerl"]
+[ext_resource type="Texture2D" uid="uid://bdj8amo4qaj3y" path="res://assets/Characters/Orc/PNG/PNG Sequences/Jump Loop/0_Orc_Jump Loop_003.png" id="27_1denk"]
+[ext_resource type="Texture2D" uid="uid://uj17uwvpc7ol" path="res://assets/Characters/Orc/PNG/PNG Sequences/Jump Loop/0_Orc_Jump Loop_004.png" id="28_pr2u0"]
+[ext_resource type="Texture2D" uid="uid://cv2b80e2i5snf" path="res://assets/Characters/Orc/PNG/PNG Sequences/Jump Loop/0_Orc_Jump Loop_005.png" id="29_u7vp8"]
+[ext_resource type="Texture2D" uid="uid://cynd2f6n34uyr" path="res://assets/Characters/Orc/PNG/PNG Sequences/Jump Start/0_Orc_Jump Start_001.png" id="30_5baak"]
+[ext_resource type="Texture2D" uid="uid://8e7h60jnss2c" path="res://assets/Characters/Orc/PNG/PNG Sequences/Jump Start/0_Orc_Jump Start_002.png" id="31_lg0d0"]
+[ext_resource type="Texture2D" uid="uid://dmb7ijyqxlpig" path="res://assets/Characters/Orc/PNG/PNG Sequences/Jump Start/0_Orc_Jump Start_003.png" id="32_52tnl"]
+[ext_resource type="Texture2D" uid="uid://7brs4v4lvm0k" path="res://assets/Characters/Orc/PNG/PNG Sequences/Jump Start/0_Orc_Jump Start_004.png" id="33_cd4rn"]
+[ext_resource type="Texture2D" uid="uid://dyrcyxnps0l7g" path="res://assets/Characters/Orc/PNG/PNG Sequences/Jump Start/0_Orc_Jump Start_005.png" id="34_u1syo"]
+[ext_resource type="Texture2D" uid="uid://fmrrq64kx0af" path="res://assets/Characters/Orc/PNG/PNG Sequences/Running/0_Orc_Running_000.png" id="35_5tu80"]
+[ext_resource type="Texture2D" uid="uid://dl7hgibf64n6b" path="res://assets/Characters/Orc/PNG/PNG Sequences/Running/0_Orc_Running_001.png" id="36_4p3g1"]
+[ext_resource type="Texture2D" uid="uid://by7o2rdsfqr8v" path="res://assets/Characters/Orc/PNG/PNG Sequences/Running/0_Orc_Running_002.png" id="37_kp7wf"]
+[ext_resource type="Texture2D" uid="uid://2u7of7b66obk" path="res://assets/Characters/Orc/PNG/PNG Sequences/Running/0_Orc_Running_003.png" id="38_wimqo"]
+[ext_resource type="Texture2D" uid="uid://dbf3i8craa3hi" path="res://assets/Characters/Orc/PNG/PNG Sequences/Running/0_Orc_Running_004.png" id="39_d53yw"]
+[ext_resource type="Texture2D" uid="uid://fkkaqhbisepo" path="res://assets/Characters/Orc/PNG/PNG Sequences/Running/0_Orc_Running_005.png" id="40_76vda"]
+[ext_resource type="Texture2D" uid="uid://buouitgoppdo6" path="res://assets/Characters/Orc/PNG/PNG Sequences/Running/0_Orc_Running_006.png" id="41_wr1ff"]
+[ext_resource type="Texture2D" uid="uid://capd1822g4n1a" path="res://assets/Characters/Orc/PNG/PNG Sequences/Running/0_Orc_Running_007.png" id="42_qvsvw"]
+[ext_resource type="Texture2D" uid="uid://dg5okxderrubb" path="res://assets/Characters/Orc/PNG/PNG Sequences/Running/0_Orc_Running_008.png" id="43_p0ss8"]
+[ext_resource type="Texture2D" uid="uid://cj58s6e7t6imx" path="res://assets/Characters/Orc/PNG/PNG Sequences/Running/0_Orc_Running_009.png" id="44_d2hsg"]
+[ext_resource type="Texture2D" uid="uid://dwiyr73xxobwj" path="res://assets/Characters/Orc/PNG/PNG Sequences/Running/0_Orc_Running_010.png" id="45_a8ots"]
+[ext_resource type="Texture2D" uid="uid://cce87ec38fyue" path="res://assets/Characters/Orc/PNG/PNG Sequences/Running/0_Orc_Running_011.png" id="46_oou2j"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wyfeg"]
+radius = 21.0238
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2lrl7"]
+size = Vector2(31, 106)
+
+[sub_resource type="Animation" id="Animation_jgmlh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("3_3l8dy")]
+}
+
+[sub_resource type="Animation" id="Animation_b1re5"]
+resource_name = "idle"
+length = 0.85
+loop_mode = 1
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("6_ww2dj"), ExtResource("7_l5s0l"), ExtResource("8_8t526"), ExtResource("9_8wkn0"), ExtResource("10_33u3y"), ExtResource("11_80ee1"), ExtResource("12_8q7eb"), ExtResource("13_gdap2"), ExtResource("14_5db8m"), ExtResource("15_3wmr7"), ExtResource("16_sk4rb"), ExtResource("17_sne5p"), ExtResource("18_xbmi1"), ExtResource("19_7j2s4"), ExtResource("20_aenno"), ExtResource("21_5v5gj"), ExtResource("22_hkyuv"), ExtResource("23_i6scs")]
+}
+
+[sub_resource type="Animation" id="Animation_3o1np"]
+resource_name = "jump_loop"
+length = 0.25
+loop_mode = 1
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2, 0.25),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("24_igtl2"), ExtResource("25_dnuep"), ExtResource("26_hcerl"), ExtResource("27_1denk"), ExtResource("28_pr2u0"), ExtResource("29_u7vp8")]
+}
+
+[sub_resource type="Animation" id="Animation_u66ek"]
+resource_name = "jump_start"
+length = 0.25
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("30_5baak"), ExtResource("31_lg0d0"), ExtResource("32_52tnl"), ExtResource("33_cd4rn"), ExtResource("34_u1syo")]
+}
+
+[sub_resource type="Animation" id="Animation_8qv7k"]
+resource_name = "running"
+length = 0.55
+loop_mode = 1
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5, 0.55),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("35_5tu80"), ExtResource("36_4p3g1"), ExtResource("37_kp7wf"), ExtResource("38_wimqo"), ExtResource("39_d53yw"), ExtResource("40_76vda"), ExtResource("41_wr1ff"), ExtResource("42_qvsvw"), ExtResource("43_p0ss8"), ExtResource("44_d2hsg"), ExtResource("45_a8ots"), ExtResource("46_oou2j")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nnrgd"]
+_data = {
+"RESET": SubResource("Animation_jgmlh"),
+"idle": SubResource("Animation_b1re5"),
+"jump_loop": SubResource("Animation_3o1np"),
+"jump_start": SubResource("Animation_u66ek"),
+"running": SubResource("Animation_8qv7k")
+}
+
+[node name="first_level" type="Node2D"]
+script = ExtResource("1_byi3v")
+next_level = ExtResource("2_1pm50")
+
+[node name="TileMap" parent="." instance=ExtResource("2_07ea1")]
+position = Vector2(-5, 498)
+scale = Vector2(0.1, 0.1)
+
+[node name="Spawn" type="Node2D" parent="."]
+position = Vector2(199, 495)
+script = ExtResource("3_67xpm")
+
+[node name="UmbrellaGreen" type="Sprite2D" parent="Spawn"]
+position = Vector2(-163, -65)
+scale = Vector2(0.265625, 0.265625)
+texture = ExtResource("4_r3c8g")
+
+[node name="spawnPoint" type="Marker2D" parent="Spawn"]
+position = Vector2(-164, -2)
+
+[node name="Finish" type="Area2D" parent="."]
+position = Vector2(199, 495)
+
+[node name="UmbrellaGreen" type="Sprite2D" parent="Finish"]
+position = Vector2(430, 46)
+scale = Vector2(0.228516, 0.228516)
+texture = ExtResource("5_ajota")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Finish"]
+position = Vector2(433, 83)
+shape = SubResource("CircleShape2D_wyfeg")
+
+[node name="Player" type="CharacterBody2D" parent="."]
+position = Vector2(120, 427)
+script = ExtResource("2_mfyes")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2(-0.5, -53)
+shape = SubResource("RectangleShape2D_2lrl7")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
+position = Vector2(0, -54)
+scale = Vector2(0.180427, 0.180427)
+texture = ExtResource("3_3l8dy")
+
+[node name="Gun" type="Node2D" parent="Player"]
+position = Vector2(0, -30)
+script = ExtResource("4_oy0ao")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player/Gun"]
+scale = Vector2(0.215359, 0.215359)
+texture = ExtResource("5_kb8hw")
+
+[node name="Bullet_pos" type="Marker2D" parent="Player/Gun"]
+position = Vector2(108, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Player"]
+libraries = {
+"": SubResource("AnimationLibrary_nnrgd")
+}
+autoplay = "idle"
