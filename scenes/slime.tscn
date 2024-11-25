@@ -1,0 +1,66 @@
+[gd_scene load_steps=9 format=3 uid="uid://gt6yh40w3ob4"]
+
+[ext_resource type="Texture2D" uid="uid://dpgvrp3utaol3" path="res://assets/brackeys_platformer_assets/sprites/slime_green.png" id="1_bmbg2"]
+[ext_resource type="PackedScene" uid="uid://rvxxmr2d160k" path="res://scenes/killzone.tscn" id="2_t0ars"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7grgo"]
+atlas = ExtResource("1_bmbg2")
+region = Rect2(0, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x5jwj"]
+atlas = ExtResource("1_bmbg2")
+region = Rect2(24, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kkmt4"]
+atlas = ExtResource("1_bmbg2")
+region = Rect2(48, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u6eih"]
+atlas = ExtResource("1_bmbg2")
+region = Rect2(72, 24, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_da4ob"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7grgo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x5jwj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kkmt4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u6eih")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gpo57"]
+size = Vector2(10, 15)
+
+[node name="Slime" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -12)
+sprite_frames = SubResource("SpriteFrames_da4ob")
+autoplay = "default"
+frame = 3
+frame_progress = 1.0
+
+[node name="Killzone" parent="." instance=ExtResource("2_t0ars")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
+position = Vector2(0, -7.5)
+shape = SubResource("RectangleShape2D_gpo57")
+
+[node name="RayCastRight" type="RayCast2D" parent="."]
+position = Vector2(0, -7)
+target_position = Vector2(9, 0)
+
+[node name="RayCastLeft" type="RayCast2D" parent="."]
+position = Vector2(-1, -7)
+target_position = Vector2(-8, 0)
