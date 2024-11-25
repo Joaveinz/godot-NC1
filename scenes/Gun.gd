@@ -13,4 +13,5 @@ func shoot():
 	var bullet = bullet_path.instantiate()
 	get_parent().get_parent().get_parent().add_child(bullet)
 	bullet.position = $Bullet_pos.get_global_position()
+	bullet.look_at(get_global_mouse_position())
 	bullet.velocity = get_global_mouse_position() - bullet.position
