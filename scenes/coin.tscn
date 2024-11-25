@@ -1,6 +1,6 @@
 [gd_scene load_steps=17 format=3 uid="uid://b4e7xpxc7xrwv"]
 
-[ext_resource type="Script" path="res://scenes/coin.gd" id="1_2mo33"]
+[ext_resource type="Script" path="res://scripts/coin.gd" id="1_2mo33"]
 [ext_resource type="Texture2D" uid="uid://cg0xfv46bm8yh" path="res://assets/brackeys_platformer_assets/sprites/coin.png" id="1_44ys0"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vlq68"]
