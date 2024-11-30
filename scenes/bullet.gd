@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 @export var speed = 300;
+@export var explosion: PackedScene;
 var timeCollided = 0;
 #@export var velocity = Vector2(0, 0);
 
@@ -23,4 +24,13 @@ func _physics_process(delta):
 	elif(collision):
 		#queue_free()
 		timeCollided = Time.get_ticks_msec()
-		
+		explode()
+
+func explode():
+	print("explode!")
+	var _particle = explosion.instantiate()
+	_particle.position = global_position
+	_particle.rotation = global_rotation
+	_particle.emitting = true
+	get_tree().current_scene.add_child(_particle)
+	queue_free()
