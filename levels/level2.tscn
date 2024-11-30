@@ -1,11 +1,11 @@
 [gd_scene load_steps=14 format=4 uid="uid://bkja5xvrlhegq"]
 
-[ext_resource type="PackedScene" uid="uid://coonc57jvqk0y" path="res://scenes/knight_player.tscn" id="1_po7wt"]
+[ext_resource type="PackedScene" path="res://scenes/knight_player.tscn" id="1_po7wt"]
 [ext_resource type="Texture2D" uid="uid://cidbrgg3dliji" path="res://assets/brackeys_platformer_assets/sprites/world_tileset.png" id="2_ne8fl"]
-[ext_resource type="PackedScene" uid="uid://uswl2t4i37o8" path="res://scenes/moving_platform.tscn" id="3_to2xt"]
+[ext_resource type="PackedScene" path="res://scenes/moving_platform.tscn" id="3_to2xt"]
 [ext_resource type="PackedScene" uid="uid://du44ju8gbjo8a" path="res://scenes/coin.tscn" id="4_f02xx"]
-[ext_resource type="PackedScene" uid="uid://rvxxmr2d160k" path="res://scenes/killzone.tscn" id="5_rpml1"]
-[ext_resource type="PackedScene" uid="uid://gt6yh40w3ob4" path="res://scenes/slime.tscn" id="6_55to0"]
+[ext_resource type="PackedScene" path="res://scenes/killzone.tscn" id="5_rpml1"]
+[ext_resource type="PackedScene" path="res://scenes/slime.tscn" id="6_55to0"]
 [ext_resource type="Script" path="res://scripts/slime.gd" id="7_37gny"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h3a8g"]
