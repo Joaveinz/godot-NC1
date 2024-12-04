@@ -189,6 +189,11 @@ shape = SubResource("CircleShape2D_wyfeg")
 position = Vector2(120, 427)
 script = ExtResource("2_mfyes")
 
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(-2, -34)
+position_smoothing_enabled = true
+position_smoothing_speed = 6.0
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 position = Vector2(-0.5, -53)
 shape = SubResource("RectangleShape2D_2lrl7")
