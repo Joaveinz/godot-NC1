@@ -207,7 +207,7 @@ scale = Vector2(0.215359, 0.215359)
 texture = ExtResource("5_kb8hw")
 
 [node name="Bullet_pos" type="Marker2D" parent="Player/Gun"]
-position = Vector2(108, 0)
+position = Vector2(59, -6)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Player"]
 libraries = {
