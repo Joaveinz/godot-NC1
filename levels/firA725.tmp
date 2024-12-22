@@ -188,6 +188,7 @@ shape = SubResource("CircleShape2D_wyfeg")
 
 [node name="Player" type="CharacterBody2D" parent="."]
 position = Vector2(120, 427)
+collision_mask = 3
 script = ExtResource("2_mfyes")
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
@@ -229,16 +230,20 @@ shape = SubResource("RectangleShape2D_2lrl7")
 
 [node name="Enemy3" parent="." instance=ExtResource("52_b01bo")]
 position = Vector2(514, 102)
-collision_mask = 1
+collision_layer = 2
+collision_mask = 5
 
 [node name="Enemy4" parent="." instance=ExtResource("52_b01bo")]
 position = Vector2(456, 175)
-collision_mask = 1
+collision_layer = 2
+collision_mask = 5
 
 [node name="Enemy2" parent="." instance=ExtResource("52_b01bo")]
 position = Vector2(541, 242)
-collision_mask = 1
+collision_layer = 2
+collision_mask = 5
 
 [node name="Enemy" parent="." instance=ExtResource("52_b01bo")]
 position = Vector2(350, 145)
-collision_mask = 1
+collision_layer = 2
+collision_mask = 5

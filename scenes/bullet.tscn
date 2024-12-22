@@ -5,17 +5,18 @@
 [ext_resource type="PackedScene" uid="uid://cgx772p2vnia6" path="res://scenes/explosion.tscn" id="2_qrka0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bb4ff"]
-size = Vector2(14, 14)
+size = Vector2(366.939, 366.939)
 
-[node name="Bullet" type="CharacterBody2D"]
-scale = Vector2(1.2676, 1.2676)
+[node name="Bullet" type="Sprite2D"]
+scale = Vector2(0.0599555, 0.0599555)
+texture = ExtResource("2_fhqfe")
 script = ExtResource("1_chitp")
 explosion = ExtResource("2_qrka0")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.0357158, 0.0357158)
-texture = ExtResource("2_fhqfe")
+[node name="Area2D" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -2.38419e-07)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(7.95318e-06, 0)
 shape = SubResource("RectangleShape2D_bb4ff")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
