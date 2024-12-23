@@ -3,6 +3,7 @@ class_name Player
 
 @onready var animationPlayer = $AnimationPlayer
 @onready var sprite = $Sprite2D
+@onready var timer: Timer
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
@@ -38,3 +39,10 @@ func update_animations(direction):
 			animationPlayer.play("running")
 	else:
 		animationPlayer.play("jump_loop")
+
+func die():
+	print("You died!")
+	await get_tree().create_timer(0.2).timeout
+	get_tree().reload_current_scene()
+	
+	

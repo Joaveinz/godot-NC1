@@ -3,10 +3,11 @@ class_name Bullet
 
 @export var speed = 300;
 @export var explosion: PackedScene;
-
+var velocity = Vector2()
 func _physics_process(delta):
-	translate(Vector2(1 ,0) * speed * delta)
-
+	translate(Vector2(1,0) * speed * delta)
+	
+	
 func trigger_explosion():
 	var _particle = explosion.instantiate()
 	_particle.position = global_position
@@ -19,3 +20,6 @@ func _on_area_2d_body_entered(body):
 	if body is Enemy:
 		body.queue_free()
 		trigger_explosion()
+
+func _on_visible_on_screen_notifier_2d_screen_exited():
+	queue_free()

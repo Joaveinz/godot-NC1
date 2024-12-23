@@ -1,4 +1,4 @@
-[gd_scene load_steps=64 format=3 uid="uid://l5wfisf80a7v"]
+[gd_scene load_steps=61 format=3 uid="uid://l5wfisf80a7v"]
 
 [ext_resource type="Script" path="res://levels/first_level.gd" id="1_byi3v"]
 [ext_resource type="PackedScene" uid="uid://bkja5xvrlhegq" path="res://levels/level2.tscn" id="2_1pm50"]
@@ -52,8 +52,6 @@
 [ext_resource type="Texture2D" uid="uid://dwiyr73xxobwj" path="res://assets/Characters/Orc/PNG/PNG Sequences/Running/0_Orc_Running_010.png" id="45_a8ots"]
 [ext_resource type="Texture2D" uid="uid://cce87ec38fyue" path="res://assets/Characters/Orc/PNG/PNG Sequences/Running/0_Orc_Running_011.png" id="46_oou2j"]
 [ext_resource type="PackedScene" uid="uid://e8slt4kv6fbl" path="res://scenes/level1/enemy.tscn" id="52_b01bo"]
-[ext_resource type="PackedScene" uid="uid://rvxxmr2d160k" path="res://scenes/killzone.tscn" id="53_idemk"]
-[ext_resource type="Script" path="res://scenes/level1/killzone.gd" id="54_s3wkp"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_wyfeg"]
 radius = 21.0238
@@ -156,9 +154,6 @@ _data = {
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2lrl7"]
 size = Vector2(31, 106)
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_onsvf"]
-distance = -122.0
-
 [node name="first_level" type="Node2D"]
 script = ExtResource("1_byi3v")
 next_level = ExtResource("2_1pm50")
@@ -247,12 +242,3 @@ collision_mask = 1
 [node name="Enemy" parent="." instance=ExtResource("52_b01bo")]
 position = Vector2(350, 145)
 collision_mask = 1
-
-[node name="Killzone" parent="." instance=ExtResource("53_idemk")]
-position = Vector2(120, 427)
-collision_mask = 1
-script = ExtResource("54_s3wkp")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
-position = Vector2(4, 155)
-shape = SubResource("WorldBoundaryShape2D_onsvf")

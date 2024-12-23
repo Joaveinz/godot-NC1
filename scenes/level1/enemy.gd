@@ -12,5 +12,4 @@ func _physics_process(delta):
 
 func _on_player_detector_body_entered(body):
 	if body is Player:
-		#TODO: replace with DIE function
-		body.queue_free()
+		body.die()
