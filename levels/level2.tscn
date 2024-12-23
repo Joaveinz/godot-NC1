@@ -1,14 +1,16 @@
-[gd_scene load_steps=16 format=4 uid="uid://bkja5xvrlhegq"]
+[gd_scene load_steps=18 format=4 uid="uid://bkja5xvrlhegq"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_jyqsx"]
 [ext_resource type="PackedScene" uid="uid://coonc57jvqk0y" path="res://scenes/knight_player.tscn" id="1_po7wt"]
 [ext_resource type="Texture2D" uid="uid://cidbrgg3dliji" path="res://assets/brackeys_platformer_assets/sprites/world_tileset.png" id="2_ne8fl"]
-[ext_resource type="PackedScene" path="res://scenes/moving_platform.tscn" id="3_to2xt"]
+[ext_resource type="PackedScene" uid="uid://uswl2t4i37o8" path="res://scenes/moving_platform.tscn" id="3_to2xt"]
 [ext_resource type="PackedScene" uid="uid://du44ju8gbjo8a" path="res://scenes/coin.tscn" id="4_f02xx"]
 [ext_resource type="PackedScene" uid="uid://rvxxmr2d160k" path="res://scenes/killzone.tscn" id="5_rpml1"]
 [ext_resource type="PackedScene" uid="uid://gt6yh40w3ob4" path="res://scenes/slime.tscn" id="6_55to0"]
 [ext_resource type="Script" path="res://scripts/slime.gd" id="7_37gny"]
 [ext_resource type="FontFile" uid="uid://bgqgug803to8s" path="res://assets/brackeys_platformer_assets/fonts/PixelOperator8.ttf" id="8_egnsh"]
+[ext_resource type="PackedScene" uid="uid://bahu3wjxy4npe" path="res://scenes/chain.tscn" id="10_lkwwi"]
+[ext_resource type="Script" path="res://levels/pivot.gd" id="10_lwn52"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h3a8g"]
 texture = ExtResource("2_ne8fl")
@@ -256,6 +258,11 @@ limit_bottom = 110
 limit_smoothed = true
 position_smoothing_enabled = true
 
+[node name="pivot" type="Node2D" parent="Player"]
+script = ExtResource("10_lwn52")
+
+[node name="Chain" parent="Player/pivot" instance=ExtResource("10_lkwwi")]
+
 [node name="Killzone" parent="." instance=ExtResource("5_rpml1")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
@@ -303,3 +310,5 @@ theme_override_fonts/font = ExtResource("8_egnsh")
 theme_override_font_sizes/font_size = 8
 text = "nothing to see here ..
 "
+
+[connection signal="hooked" from="Player/pivot/Chain" to="Player" method="_on_chain_hooked"]

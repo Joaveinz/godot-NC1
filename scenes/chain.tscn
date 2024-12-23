@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bahu3wjxy4npe"]
+
+[ext_resource type="Texture2D" uid="uid://u1l2wwvu0mje" path="res://icon.svg" id="1_iau12"]
+[ext_resource type="Script" path="res://scripts/chain.gd" id="2_pkgjd"]
+
+[node name="Chain" type="Sprite2D"]
+texture_repeat = 2
+rotation = -1.5708
+texture = ExtResource("1_iau12")
+region_enabled = true
+region_rect = Rect2(0, 0, 8, 0)
+script = ExtResource("2_pkgjd")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+target_position = Vector2(0, 75)
