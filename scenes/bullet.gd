@@ -3,9 +3,10 @@ class_name Bullet
 
 @export var speed = 300;
 @export var explosion: PackedScene;
-var velocity = Vector2()
+@export var velocity = Vector2();
+
 func _physics_process(delta):
-	translate(Vector2(1,0) * speed * delta)
+	translate(velocity.normalized() * speed * delta)
 	
 	
 func trigger_explosion():
